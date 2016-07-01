@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">GeoQuiz</string>
+    <string name="q1">New Delhi is the capital of India</string>
+    <string name="button">Exit</string>
+    <string name="true_button">True</string>
+    <string name="false_button">False</string>
+    <string name="correct_toast">Correct!!</string>
+    <string name="incorrect_toast">InCorrect!!</string>
+    <string name="next_button">Next</string>
+    <string name="q2">Great wall of china is visible from outer space</string>
+    <string name="q3">Greenland is covered with ice</string>
+    <string name="q4">Indus valley is the oldest civilization in world</string>
+    <string name="q5">Australia is a peninsula</string>
+    <string name="back_button">Back</string>
+    <string name="q6">Vatican City is the largest country</string>
+    <string name="q7">Africa is a continent</string>
+    <string name="q8">pacific ocean is the smallest ocean</string>
+    <string name="q9">Andes is largest mountain range in world </string>
+    <string name="q10">Indonesia is home to most number of active volcanoes</string>
+    <string name="warning_text">Are you sure you want to cheat</string>
+    <string name="show_answer_button">Show Answer</string>
+    <string name="cheat_button">Cheat!</string>
+    <string name="judgment_toast">Cheating is wrong</string>
+</resources>
