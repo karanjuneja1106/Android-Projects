@@ -35,13 +35,14 @@ public class TimeTableFragment extends Fragment {
         View view= inflater.inflate(R.layout.fragment_recycler_view,container,false);
         mRecyclerView=(RecyclerView)view.findViewById(R.id.recycler_view);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        if(dayCode>6||dayCode<2)
+            dayCode=2;
         Day day=Days.get(getActivity()).getDay(dayCode);
         updateUI(day);
         return view;
     }
     private void updateUI(Day day){
         List<LectureDetails> mLecs=day.getLectures();
-
         mAdapter=new ItemAdapter(mLecs);
         mRecyclerView.setAdapter(mAdapter);
         mAdapter.notifyDataSetChanged();

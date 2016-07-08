@@ -20,6 +20,8 @@ public class EditActivity extends AppCompatActivity{
         setContentView(R.layout.activity_fragment);
         Calendar calendar= Calendar.getInstance();
         dayCode=calendar.get(Calendar.DAY_OF_WEEK);
+        if(dayCode>6||dayCode<2)
+            dayCode=2;
         if(savedInstanceState==null){
             Intent i=new Intent(EditActivity.this,MenuDaysActivity.class);
             startActivityForResult(i,REQUEST_CODE);
@@ -48,7 +50,6 @@ public class EditActivity extends AppCompatActivity{
         }
         dayCode=data.getIntExtra(MenuDaysActivity.EXTRA_SELECTED_DAY,0);
         setTitle(Days.get(EditActivity.this).getDay(dayCode).getDayTitle());
-        //setTitle(Days.get(EditActivity.this).getDay(data.getIntExtra(MenuDaysActivity.EXTRA_SELECTED_DAY,0)).getDayTitle());
     }
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {

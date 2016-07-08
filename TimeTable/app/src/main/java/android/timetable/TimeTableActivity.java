@@ -18,6 +18,8 @@ public class TimeTableActivity extends AppCompatActivity{
         setContentView(R.layout.activity_fragment);
         Calendar calendar= Calendar.getInstance();
         dayCode=calendar.get(Calendar.DAY_OF_WEEK);
+        if(dayCode>6||dayCode<2)
+            dayCode=2;
         setTitle(Days.get(TimeTableActivity.this).getDay(dayCode).getDayTitle());
         FragmentManager fm=getSupportFragmentManager();
         Fragment fragment=fm.findFragmentById(R.id.fragment_container);
