@@ -34,7 +34,6 @@ public class AddItemActivity extends AppCompatActivity{
         mLecTiming=(EditText)findViewById(R.id.lec_time);
         mLecTitle=(EditText)findViewById(R.id.lec_title);
         mAddButton=(Button)findViewById(R.id.lec_add);
-        mLecNo.setText(""+(Days.get(AddItemActivity.this).getDay(dayCode).getLectures().size()+1));
         setTitle(Days.get(AddItemActivity.this).getDay(dayCode).getDayTitle());
         mLecTiming.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
@@ -89,6 +88,7 @@ public class AddItemActivity extends AppCompatActivity{
         {
             dayCode=data.getIntExtra(MenuDaysActivity.EXTRA_SELECTED_DAY,0);
         }
+        mLecNo.setText(""+(Days.get(AddItemActivity.this).getDay(dayCode).getLectures().size()+1));
         setTitle(Days.get(AddItemActivity.this).getDay(dayCode).getDayTitle());
     }
     @Override
