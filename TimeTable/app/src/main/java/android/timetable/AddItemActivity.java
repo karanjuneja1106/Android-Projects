@@ -17,7 +17,7 @@ import java.util.Date;
 public class AddItemActivity extends AppCompatActivity{
     private EditText mLecNo,mLecTiming,mLecTitle;
     private Button mAddButton;
-    private int dayCode=new Date().getDay();
+    private int dayCode=2;
     private int REQUEST_CODE=1;
     private String KEY_DAY_CODE="day_code";
     @Override
@@ -29,18 +29,13 @@ public class AddItemActivity extends AppCompatActivity{
            startActivityForResult(i,REQUEST_CODE);
        }
         else
-            dayCode=savedInstanceState.getInt(KEY_DAY_CODE);
+           dayCode=savedInstanceState.getInt(KEY_DAY_CODE);
         mLecNo=(EditText)findViewById(R.id.lec_number);
         mLecTiming=(EditText)findViewById(R.id.lec_time);
         mLecTitle=(EditText)findViewById(R.id.lec_title);
         mAddButton=(Button)findViewById(R.id.lec_add);
+        mLecNo.setText(""+(Days.get(AddItemActivity.this).getDay(dayCode).getLectures().size()+1));
         setTitle(Days.get(AddItemActivity.this).getDay(dayCode).getDayTitle());
-        mLecNo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mLecNo.setText(""+(Days.get(AddItemActivity.this).getDay(dayCode).getLectures().size()+1));
-            }
-        });
         mLecTiming.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
