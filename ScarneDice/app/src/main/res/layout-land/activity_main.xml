@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<LinearLayout
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="karanjuneja.scarnedice.MainActivity">
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status"
+        android:textSize="20dp"
+        android:textColor="@color/colorAccent"
+        android:layout_gravity="center"
+        android:paddingTop="15dp"
+    />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Your turn score:0"
+        android:visibility="invisible"
+        android:id="@+id/tvCurrentScore"
+        android:textSize="16sp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your overall score:0"
+        android:id="@+id/tvTotalScore"
+        android:textSize="16sp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Computer's overall score:0"
+        android:id="@+id/tvComputerScore"
+        android:textSize="16sp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        />
+
+   <ImageButton
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:src="@drawable/dice1"
+       android:id="@+id/ivDiceFace"
+       android:layout_gravity="center"
+       android:layout_marginTop="10sp"
+       android:layout_marginBottom="10sp"
+       />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/holdbtn"
+            android:text="HOLD"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rollbtn"
+            android:text="ROLL"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/resetbtn"
+            android:text="RESET"
+            />
+
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>
