@@ -91,8 +91,7 @@ public class AnagramDictionary {
         {
             word=list.get(random.nextInt(list.size()));
         }
-        if(level+DEFAULT_WORD_LENGTH<MAX_WORD_LENGTH)
-            level++;
+            level=(level+1)%5;
             return word;
     }
 }
